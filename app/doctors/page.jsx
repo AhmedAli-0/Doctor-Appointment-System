@@ -3,7 +3,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
-export default function page() {
+export default function Page() {
   const [getData, setGetData] = useState([]);
 
   // Read Data

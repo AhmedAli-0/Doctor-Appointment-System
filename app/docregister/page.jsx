@@ -11,7 +11,7 @@ const formDataInitialState = {
     specialization: "",
 };
 
-export default function page() {
+export default function Page() {
     const [formData, setFormData] = useState(formDataInitialState);
     const router = useRouter()
 

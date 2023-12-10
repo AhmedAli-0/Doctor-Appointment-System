@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 const initialState = { name: "", email: "", specialization: "" }
 
-export default function page() {
+export default function Page() {
   const [state, setState] = useState(initialState)
   const handleChange = e => setState(s => ({ ...s, [e.target.name]: e.target.value }))
 

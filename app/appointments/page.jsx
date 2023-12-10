@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-export default function page() {
+export default function Page() {
   const router = useRouter()
 
   const [isOpen, setIsOpen] = useState(false);

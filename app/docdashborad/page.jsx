@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { useRouter } from 'next/navigation';
 
-export default function docdashborad() {
+export default function Docdashborad() {
   
   const router = useRouter()
   return (
