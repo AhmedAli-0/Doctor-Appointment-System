@@ -167,7 +167,7 @@ export default function Page() {
 
                                 {/* <!-- Register link --> */}
                                 <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                                    Don't have an account?&nbsp;&nbsp;
+                                     Create a New Account? 
                                     <Link
                                         href="/patregister"
                                         className="underline text-teal-500 transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"

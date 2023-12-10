@@ -14,7 +14,7 @@ export default function Home() {
           height={0}
           priority
         />
-        <p className="text-5xl ... text-center dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert z-[1] underline decoration-double decoration-2">Doctor's Appointment System</p>
+        <p className="text-5xl ... text-center dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert z-[1] underline decoration-double decoration-2">Doctor Appointment System</p>
       </div>
 
       <div className="flex justify-center mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 gap-4">
