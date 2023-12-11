@@ -11,9 +11,11 @@ const formDataInitialState = {
     specialization: "",
 };
 
+let docData = {};
+
 export default function Page() {
     const [formData, setFormData] = useState(formDataInitialState);
-    const router = useRouter()
+    const router = useRouter();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,11 +23,10 @@ export default function Page() {
 
     const handleRegister = async () => {
         try {
+            docData = formData;
             const response = await axios.post("http://localhost:8000/docregister", formData);
             const userData = await response.data;
 
-            // Store user data in localStorage
-            localStorage.setItem("user", JSON.stringify(userData));
             setFormData(formDataInitialState);
             router.push('/docdashborad')
         }
@@ -213,7 +214,7 @@ export default function Page() {
 
                                 {/* <!-- Login link --> */}
                                 <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                                    Have an account? 
+                                    Have an account?
                                     <Link
                                         href="/doclogin"
                                         className="underline text-teal-500 transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"

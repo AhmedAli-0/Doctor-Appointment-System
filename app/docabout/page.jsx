@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-
+import docData from '../docregister/page';
+import axios from 'axios';
 const initialState = { name: "", email: "", specialization: "" }
 
 export default function Page() {
@@ -10,21 +11,15 @@ export default function Page() {
   useEffect(() => {
     const userId = JSON.parse(localStorage.getItem("user"));
     console.log("userId", userId)
-
-
-    getUserById(userId)
-      .then((user) => {
-        if (user) {
-          console.log(`User found: ${user.username}`);
-        } else {
-          console.log('User not found');
-        }
+    axios
+      .get("http://localhost:8000/doctor/" + userId)
+      .then((response) => {
+        setState(response.data);
       })
       .catch((error) => {
-        console.error('Error retrieving user:', error);
+        console.error("Error : ", error.massage);
       });
 
-    console.log("state", state)
   }, [])
 
   const handleSubmit = async (e) => {

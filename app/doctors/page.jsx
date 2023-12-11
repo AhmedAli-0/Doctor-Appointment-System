@@ -35,10 +35,10 @@ export default function Page() {
           {
             getData.map((user, index) => (
               <tr key={user._id}>
-                <td class="py-4">{index + 1}</td>
-                <td class="py-4">{user.name}</td>
-                <td class="py-4">{user.email}</td>
-                <td class="py-4">{user.specialization}</td>
+                <td className="py-4">{index + 1}</td>
+                <td className="py-4">{user.name}</td>
+                <td className="py-4">{user.email}</td>
+                <td className="py-4">{user.specialization}</td>
               </tr>
             )
             )}
